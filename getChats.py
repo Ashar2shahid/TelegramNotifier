@@ -21,9 +21,7 @@ with TelegramClient(username, api_id, api_hash).start(phone=phone) as client:
             sender = await event.get_sender()
             print(sender.username)
             print(sender.id)
-            await event.reply("Thank you for subscribing to this bot, You will only recieve notification to book slot from this bot if you are part of the Delhi Visa Slots group and post regular updates, which this bot will be monitoring.")
-            await event.reply("You can customize the notification sound by clicking on my name and then clicking on notifications and then Customize")
-            
+            await event.reply("Hi, I am bot")            
 
         @client.on(events.NewMessage(GROUP_ENTITY)) #On Message from Group
         async def handler(event):
